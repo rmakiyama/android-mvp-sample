@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/ArticleListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.rmakiyama.ui.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first" />
+        android:id="@+id/ArticleListFragment"
+        android:name="com.rmakiyama.ui.articlelist.ArticleListFragment"
+        tools:layout="@layout/fragment_article_list" />
 </navigation>

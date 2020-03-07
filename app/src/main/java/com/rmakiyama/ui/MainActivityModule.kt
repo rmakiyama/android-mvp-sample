@@ -1,5 +1,8 @@
 package com.rmakiyama.ui
 
+import com.rmakiyama.di.FragmentScope
+import com.rmakiyama.ui.articlelist.ArticleListFragment
+import com.rmakiyama.ui.articlelist.ArticleListModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -9,6 +12,7 @@ abstract class MainActivityModule {
     @ContributesAndroidInjector
     internal abstract fun contributeMainActivity(): MainActivity
 
-    @ContributesAndroidInjector
-    internal abstract fun contributeFirstFragment(): FirstFragment
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [ArticleListModule::class])
+    internal abstract fun contributeArticleListFragment(): ArticleListFragment
 }
